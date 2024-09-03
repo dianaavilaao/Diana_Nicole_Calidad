@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block contenido %}
+    <h1>Mantenedor de Masajes</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Descripción</th>
+                <th>Precio</th>
+                <th>Duración</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for masaje in masajes %}
+                <tr>
+                    <td>{{ masaje.nombre }}</td>
+                    <td>{{ masaje.descripcion }}</td>
+                    <td>{{ masaje.precio }}</td>
+                    <td>{{ masaje.duracion }}</td>
+                    <td>
+                        <a href="{% url 'actualizar_masaje' masaje.pk %}">Actualizar</a>
+                        <a href="{% url 'eliminar_masaje' masaje.pk %}">Eliminar</a>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <p><a href="{% url 'crear_masaje' %}">Crear nuevo masaje</a></p>
+{% endblock %}
