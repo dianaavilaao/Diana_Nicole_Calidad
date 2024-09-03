@@ -52,3 +52,6 @@ def eliminar_masaje(request, pk):
         masaje.delete()
         return redirect('mantenedor_masajes')
     return render(request, 'eliminar_masaje.html', {'masaje': masaje})
+
+def index(request):
+    return render(request, 'index.html')

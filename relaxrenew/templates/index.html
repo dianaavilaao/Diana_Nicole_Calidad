@@ -1,0 +1,62 @@
+{% load static %}
+
+<!-- index.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mi Proyecto</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Categorías de mensajes</a></li>
+                <li><a href="#">Servicios</a></li>
+                <li><a href="#">Acerca de</a></li>
+                <li><a href="{% url 'login' %}">Administración</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="masaje1.jpg" alt="Masaje 1">
+                </div>
+                <div class="carousel-item">
+                    <img src="masaje2.jpg" alt="Masaje 2">
+                </div>
+                <div class="carousel-item">
+                    <img src="masaje3.jpg" alt="Masaje 3">
+                </div>
+            </div>
+        </section>
+        <section class="banner">
+            <h2>Oferta especial del mes</h2>
+            <p>Reserva ahora y obtendrás un 10% de descuento en tu próximo masaje</p>
+            <button>Reserva ahora</button>
+        </section>
+        <section class="cards">
+            <div class="card">
+                <h3>Masaje relajante</h3>
+                <p>Un masaje suave y relajante para aliviar el estrés y la tensión</p>
+                <p>Precio: $25.000 CLP</p>
+                <button>Reserva ahora</button>
+            </div>
+            <div class="card">
+                <h3>Masaje deportivo</h3>
+                <p>Un masaje intenso y enfocado para deportistas y personas activas</p>
+                <p>Precio: $35.000 CLP</p>
+                <button>Reserva ahora</button>
+            </div>
+            <!-- Más cards aquí -->
+        </section>
+    </main>
+    <footer>
+        <p>Teléfono: +56 9 8765 4321</p>
+        <p>Dirección: Av. Providencia 123, Santiago, Chile</p>
+        <p>Redes sociales: <a href="#">Facebook</a> <a href="#">Instagram</a> <a href="#">Twitter</a></p>
+    </footer>
+</body>
+</html>
