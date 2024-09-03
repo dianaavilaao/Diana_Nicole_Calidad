@@ -1,6 +1,8 @@
 from django.urls import path
 from . import views
 from django.contrib import admin
+from django.conf.urls.static import static
+from django.conf import settings
 
 urlpatterns = [
     path('', views.home, name='home'),
@@ -12,6 +14,6 @@ urlpatterns = [
     path('crear_masaje/', views.crear_masaje, name='crear_masaje'),
     path('actualizar_masaje/<pk>/', views.actualizar_masaje, name='actualizar_masaje'),
     path('eliminar_masaje/<pk>/', views.eliminar_masaje, name='eliminar_masaje'),
-]
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 
